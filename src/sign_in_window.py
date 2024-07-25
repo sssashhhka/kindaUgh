@@ -8,7 +8,7 @@ class SignInWindow(ui.CTk):
         # Settings
         self.title("kindaUgh")
         self.geometry("400x600")
-        # self.resizable(False, False)
+        self.resizable(False, False)
 
         # Fonts
         button_f = ui.CTkFont("Inter", size=15)
