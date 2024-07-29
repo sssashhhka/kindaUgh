@@ -2,6 +2,5 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.1_alpha| :x: |
+No versions supported
+🥲
