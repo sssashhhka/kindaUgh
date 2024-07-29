@@ -20,7 +20,7 @@ class SignInWindow(ui.CTk):
         self.frame_a = ui.CTkFrame(self, corner_radius=10)
         self.usr_box = ui.CTkEntry(self.frame_a, placeholder_text="Username", font=button_f)
         self.pss_box = ui.CTkEntry(self.frame_a, placeholder_text="Password", font=button_f)
-        self.sign_in_b = ui.CTkButton(self.frame_a, text="Sign In", font=button_f)
+        self.sign_in_b = ui.CTkButton(self.frame_a, text="Sign In", font=button_f, command=self.entry_fetch)
         self.sign_up_b = ui.CTkButton(self.frame_a, text="Sign Up", font=button_f)
         self.or_text = ui.CTkLabel(self.frame_a, text="or", font=button_f)
         self.console = ui.CTkTextbox(self, state="normal", activate_scrollbars=False, font=button_f,
@@ -52,8 +52,13 @@ class SignInWindow(ui.CTk):
         self.sign_in_b.grid(row=2, column=2, padx=(3, 7), pady=7, sticky="nsew")
 
         # Other preferences
-        self.console.insert("0.0", "Enter your username and password then press sign in or sign up")
+        self.console.insert("0.0", "Welcome!")
         self.console.configure(state="disabled")
+
+    def entry_fetch(self):
+        username = self.usr_box.get()
+        password = self.pss_box.get()
+        print(username, password)
 
 
 app = SignInWindow()
